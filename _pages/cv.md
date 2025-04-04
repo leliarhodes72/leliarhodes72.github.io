@@ -11,50 +11,43 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.A. in Linguistics, Minor in Psychology, University of Arizona, December 2022
+  * GPA: 3.95
+  * W.A. Franke Honors College
+  * Dean's List with Distinction (2021)
+* M.S. in Human Language Technology, University of Arizona Online, 2014 (expected)
+  * GPA: 3.79
+
+Research Interests
+======
+Computational linguistics, NLP in education, sentiment analysis, applied linguistics, accessible language technology, data-driven instructional tools, HLT applications in tutoring and academic support.
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* American Sign Language Aide (Paraeducator) - Kingman Unified School District #20
+  <br>_Kingman, Az | July 2018 - May 2020, January 2023 - Present_
+  * Facilitated language access for a Deaf individual by providing effective communication in both English and American Sign Language (ASL)
+  * Assisted the Teacher of the Deaf/Hard of Hearing with administrative tasks, maintaining precise language data records, and collaborating on achievable progress report goals for 4-6 students
+  * Committed to ongoing research and improvement of American Sign Language skills to enhance support for students
+  * Implemented meticulous organizational systems to manage paperwork for over 40 Special Education students, ensuring accuracy and accessibility of vital educational documents
+  * Collaborated with general education teachers to maintain a conducive learning environment by offering support in classroom management strategies, fostering a positive and productive atmosphere for student engagement and academic achievement
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Office Assistant, Team Lead - A.A.L.T. Center, University of Arizona
+  <br>_Tucson, Az | August 2020 - December 2022_
+  * Orchestrated scheduling for over 80 students, optimizing time allocation to maximize productivity and minimize downtime
+  * Spearheaded effective communication channels with 6 employees to guarantee seamless operations and proper staffing levels
+  * Offered comprehensive organization support to the head of billing, streamlining administrative processes and enacting overall efficiency in billing operations
+  * Proactively fostered educational growth within both the team and student body, implementing tailored strategies to enhance learning outcomes and maximize the impact of our services on academic advancement
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming:** Python
+* **NLP Tools/Libraries:**  NLTK, spaCy, scikit-learn, regular expressions
+* **Data Analysis:** pandas
+* **Productivity:** Microsoft Office Suite, Adobe Acrobat Suite
+* **Other:** Technical Writing, Appointment Management, Cross-Cultural Communication, Call Handling
 
-Publications
+Languages
 ======
-  # Can be listed manually, or generated from site elements using the following code: (only if you add these components back in)
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* English (native)
+* American Sign Language (advanced)
