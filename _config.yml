@@ -11,9 +11,9 @@ title                    : "Lelia Rhodes - Home Page"
 title_separator          : "-"
 name                     : &name "Lelia (Elle) Rhodes"
 description              : &description "personal description"
-url                      : https://leliarhodes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://leliarhodes72.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "leliarhodes72/leliarhodes.github.io"
+repository               : "leliarhodes72/leliarhodes72.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -84,10 +84,10 @@ author:
   avatar           : "profile.png"
   bio              : "Dedicated educator and linguist with 6+ years of experience in cross-cultural communication and a deep interest in how language shapes learning, access, and human connection in digital spaces."
   location         : "Kingman, Az"
-  employer         : "Kingman Unified School District #20, American Sign Language Specialist"
+  employer         : "Kingman Unified School District #20"
   #pubmed           : 
   #googlescholar    : 
-  email            : "leliarhodes72@gmail.com"
+  #email            : 
   #researchgate     :  
   #uri              :
   #bitbucket        :
