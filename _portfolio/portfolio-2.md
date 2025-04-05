@@ -10,7 +10,7 @@ This project involved building a sentiment- and style-based classification syste
 
 The objective of the task was to identify whether two pieces of English text were written by the same person. This type of task is known as **authorship identification** and has applications in forensic linguistics, authorship attribution in literary analysis, and online behavior tracking. The challenge was structured as a binary classification problem, where the input consisted of two spans of text separated by a delimiter (`[SNIPPET]`), and the model had to predict whether the spans were authored by the same individual (label `1`) or not (label `0`).
 
-A key complexity of this task was the absence of author labels—i.e., no metadata about authorship beyond the span pairs themselves. Therefore, the model needed to rely entirely on linguistic features and patterns in the text to infer authorship, which requires both semantic and stylistic analysis.
+A key complexity of this task was the absence of author labels—i.e., no metadata about authorship beyond the span pairs themselves. Therefore, the model needed to rely entirely on linguistic features and patterns in the text to infer authorship, which requires both semantic and stylistic analysis. The ability to distinguish writing styles without topic-level cues was central to the success of this project, and it presented a uniquely challenging opportunity to apply a wide range of NLP tools and evaluation strategies.
 
 ## Exploratory Data Analysis
 
@@ -24,11 +24,11 @@ This imbalance presented a challenge for training, particularly for recall on th
 An initial inspection of text pairs revealed substantial stylistic variation between authors. However, many pairs that were semantically similar—due to common topics, genres, or even quotation—did not share authorship. As a result, naive semantic similarity was not sufficient for classification, and deeper stylistic analysis was necessary.
 
 One illustrative example of a text pair from the dataset was:
-> Span 1: "It mounted now above that line of metal stages in the distance. And as Grantline gestured, I saw from Venus the same sword-like beam streaming off almost to cross our own."
+> Span 1: “It mounted now above that line of metal stages in the distance. And as Grantline gestured, I saw from Venus the same sword-like beam streaming off almost to cross our own.”
 > 
-> Span 2: "Grantline and I, with a mutual thought, ran around the balcony and gazed to where Mars had set. A narrow radiance was streaming up among the stars off there."
+> Span 2: “Grantline and I, with a mutual thought, ran around the balcony and gazed to where Mars had set. A narrow radiance was streaming up among the stars off there.”
 
-While these spans clearly relate thematically, the model had to decide whether these similarities indicated a shared author or not.
+While these spans clearly relate thematically, the model had to decide whether these similarities indicated a shared author or not. This example also illustrates the difficulty of separating **topic similarity** from **stylometric consistency**—a distinction central to authorship attribution tasks.
 
 ## Preprocessing and Feature Engineering
 
@@ -40,7 +40,7 @@ The preprocessing pipeline was designed to clean and normalize the input text. I
 4. **Stopword removal**: Remove common English stopwords.
 5. **Lemmatization**: Lemmatize all tokens using NLTK’s `WordNetLemmatizer`.
 
-The text was then split into two columns—`SPAN1` and `SPAN2`—based on the `[SNIPPET]` delimiter. Each span was preprocessed independently, and I used both the individual spans and their combination to build features.
+These steps allowed the model to focus on meaningful content words while reducing sparsity in the feature set. The text was then split into two columns—`SPAN1` and `SPAN2`—based on the `[SNIPPET]` delimiter. Each span was preprocessed independently, and I used both the individual spans and their combination to build features.
 
 ## Feature Extraction
 
@@ -51,9 +51,9 @@ To convert text into numerical representations, I used the **TF-IDF vectorizer**
 - `min_df=2`: Ignored terms that appeared only once
 - `max_df=0.8`: Removed overly common terms that might dilute specificity
 
-TF-IDF vectors were generated separately for each span and their combination. To enhance performance, I also calculated the **cosine similarity** between the two spans’ TF-IDF vectors. This additional feature captured overall semantic similarity and was particularly helpful for distinguishing paraphrased content.
+TF-IDF vectors were generated separately for each span and their combination. To enhance performance, I also calculated the **cosine similarity** between the two spans’ TF-IDF vectors. This additional feature captured overall semantic similarity and was particularly helpful for distinguishing paraphrased content or style continuity. The cosine similarity feature was especially helpful when two spans conveyed similar meanings with different surface forms, allowing the model to capture stylistic coherence.
 
-The final feature matrix was constructed by horizontally stacking the TF-IDF vectors of the combined span and the cosine similarity values using `scipy.sparse.hstack`.
+The final feature matrix was constructed by horizontally stacking the TF-IDF vectors of the combined span and the cosine similarity values using `scipy.sparse.hstack`. This ensured efficient storage and integration into downstream modeling pipelines.
 
 ## Modeling Approach
 
@@ -67,11 +67,15 @@ The full pipeline included:
 - Classifier training with GBC
 - Evaluation on test data
 
+I trained and validated my model using cross-validation and final test submission. During the experimentation phase, I adjusted hyperparameters such as learning rate, number of estimators, and max depth. However, due to the relatively small size of the dataset, I prioritized model simplicity and feature quality over extensive hyperparameter tuning.
+
 ## Evaluation and Results
 
 Model performance was evaluated through a blind test submission. The final Gradient Boosting model achieved a **leaderboard score of 0.57992**, which represented a **7.09% improvement over the baseline** Logistic Regression model.
 
 This result demonstrated that combining stylistic features with semantic similarity, and employing a non-linear model, led to more accurate authorship classification. Although the score reflects a moderately difficult task, it also highlighted the importance of feature engineering and model selection in text classification.
+
+Additionally, the project reinforced the value of carefully constructed baselines and incremental improvements. Each modeling decision—from preprocessing to feature choice—had a clear and measurable impact on overall performance.
 
 ## Error Analysis
 
@@ -88,6 +92,8 @@ Future improvements could include:
 - **Applying sampling techniques** like SMOTE to balance classes
 - **Exploring stylometric markers** such as sentence length, part-of-speech tags, and punctuation frequency
 
+These enhancements could help the model better generalize to unseen authors and edge cases where surface-level features fail.
+
 ## Learning Outcomes
 
 This project allowed me to demonstrate the following learning outcomes of the MS-HLT program:
@@ -96,6 +102,6 @@ This project allowed me to demonstrate the following learning outcomes of the MS
 2. **Applied NLP knowledge**: I applied tokenization, lemmatization, TF-IDF vectorization, and cosine similarity to real-world text data.
 3. **Tool integration**: I combined multiple tools and packages into a coherent ML pipeline.
 4. **Analytical thinking**: I conducted exploratory data analysis, tuned model parameters, and performed error analysis to guide improvements.
-5. **Reproducibility and professionalism**: The project was organized for easy sharing and reproducibility via GitHub.
+5. **Reproducibility and professionalism**: The project was organized for easy sharing and reproducibility via GitHub, and my code was structured to support collaboration and version control.
 
-[View the code on GitHub](#) (*https://github.com/uazhlt-ms-program/ling-539-spring-2024-class-competition-code-leliarhodes72.git*)
+[View the code on GitHub](#) *(https://github.com/uazhlt-ms-program/ling-539-spring-2024-class-competition-code-leliarhodes72.git)*
