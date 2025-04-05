@@ -14,19 +14,19 @@ A key complexity of this task was the absence of author labels—i.e., no metada
 
 ## Exploratory Data Analysis
 
-The training data contained 899 samples. Each sample had a single text field that consisted of two concatenated spans of English text, separated by the `[SNIPPET]` token. These spans varied in length and structure but generally ranged from 2 to 4 sentences each. The data was highly imbalanced:
+The training data contained 1601 samples. Each sample had a single text field that consisted of two concatenated spans of English text, separated by the `[SNIPPET]` token. These spans varied in length and structure but generally ranged from 2 to 4 sentences each. The data was highly imbalanced:
 
-- **Label 0 (Different authors):** 826 samples
-- **Label 1 (Same author):** 73 samples
+- **Label 0 (Different authors):** 1,245 samples
+- **Label 1 (Same author):** 356 samples
 
 This imbalance presented a challenge for training, particularly for recall on the minority class. In order to address this, I later incorporated class-balancing techniques during model development.
 
 An initial inspection of text pairs revealed substantial stylistic variation between authors. However, many pairs that were semantically similar—due to common topics, genres, or even quotation—did not share authorship. As a result, naive semantic similarity was not sufficient for classification, and deeper stylistic analysis was necessary.
 
 One illustrative example of a text pair from the dataset was:
-> Span 1: “It mounted now above that line of metal stages in the distance. And as Grantline gestured, I saw from Venus the same sword-like beam streaming off almost to cross our own.”
+> Span 1: “When his speaker remained silent Dirrul assumed he had been understood. He began to feel the pull of Vininese gravity, found himself in trouble with his ship. He tried to keep the disabled cargo carrier relatively stationary, so that the Vininese repair ships could locate him. With only one power tube, however, maneuver was impossible. The battered ship plunged out of control toward the planet. For an hour Dirrul fought with all the skill he knew. A thousand feet above the surface he managed to force the ship to level off temporarily. [SNIPPET] How big is a spation in space?"" ""Van Manderpootz has even measured that. A chronon is the length of time it takes one quantum of energy to push one electron from one electronic orbit to the next. There can obviously be no shorter interval of time, since an electron is the smallest unit of matter and the quantum the smallest unit of energy.”
 > 
-> Span 2: “Grantline and I, with a mutual thought, ran around the balcony and gazed to where Mars had set. A narrow radiance was streaming up among the stars off there.”
+> Span 2: “"She stiffened. "" If it was as simple as insanity, I would."" ""Please, Beth."" He wandered to the fireplace and threw in more wood. ""The stealing does bother me. I think the changing is good. [SNIPPET] I won't talk to anybody."" Beth moved to the window. The wind had died. "" I don't know, Ben."" ""Let it rest. Let's have the drink."" He came to her side."”
 
 While these spans clearly relate thematically, the model had to decide whether these similarities indicated a shared author or not. This example also illustrates the difficulty of separating **topic similarity** from **stylometric consistency**—a distinction central to authorship attribution tasks.
 
