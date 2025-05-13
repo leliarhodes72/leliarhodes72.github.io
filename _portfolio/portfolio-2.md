@@ -104,4 +104,4 @@ This project allowed me to demonstrate the following learning outcomes of the MS
 4. **Analytical thinking**: I conducted exploratory data analysis, tuned model parameters, and performed error analysis to guide improvements.
 5. **Reproducibility and professionalism**: The project was organized for easy sharing and reproducibility via GitHub, and my code was structured to support collaboration and version control.
 
-[View the code on GitHub](#) *(https://github.com/uazhlt-ms-program/ling-539-spring-2024-class-competition-code-leliarhodes72.git)*
+[View the code on GitHub](https://github.com/leliarhodes72/Authorship-Classification-via-Stylometric-Features.git) 
