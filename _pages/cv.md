@@ -15,7 +15,7 @@ Education
   * GPA: 3.95
   * W.A. Franke Honors College
   * Dean's List with Distinction (2021)
-* M.S. in Human Language Technology, University of Arizona Online, 2014 (expected)
+* M.S. in Human Language Technology, University of Arizona Online, 2025 (expected)
   * GPA: 3.79
 
 Research Interests
@@ -32,7 +32,7 @@ Work experience
   * Implemented meticulous organizational systems to manage paperwork for over 40 Special Education students, ensuring accuracy and accessibility of vital educational documents
   * Collaborated with general education teachers to maintain a conducive learning environment by offering support in classroom management strategies, fostering a positive and productive atmosphere for student engagement and academic achievement
 
-* Office Assistant, Team Lead - A.A.L.T. Center, University of Arizona
+* Office Assistant, Team Lead - S.A.L.T. Center, University of Arizona
   <br>_Tucson, Az | August 2020 - December 2022_
   * Orchestrated scheduling for over 80 students, optimizing time allocation to maximize productivity and minimize downtime
   * Spearheaded effective communication channels with 6 employees to guarantee seamless operations and proper staffing levels
