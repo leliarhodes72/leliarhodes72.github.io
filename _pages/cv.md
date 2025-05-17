@@ -16,7 +16,7 @@ Education
   * W.A. Franke Honors College
   * Dean's List with Distinction (2021)
 * M.S. in Human Language Technology, University of Arizona Online, 2025 (expected)
-  * GPA: 3.79
+  * GPA: 3.81
 
 Research Interests
 ======
