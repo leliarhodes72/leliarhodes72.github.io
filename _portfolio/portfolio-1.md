@@ -77,16 +77,13 @@ To avoid duplicate processing, a hidden column called `__Processed__` tracks whi
 
 The Reflection Sentiment Analyzer significantly reduces the time needed to review tutor reflections. What once required a manual, labor-intensive review of each row can now be triaged in minutes. The sentiment labels and emoji flags create an at-a-glance summary that highlights which students might need additional attention, and which reflections indicate positive growth or success.
 
-During testing with sample tutor data, the plugin reliably flagged concerning patterns, such as:
-- Students experiencing panic or academic burnout
-- Session notes indicating disengagement or stress
-- Sessions that were very short or vague
+During testing with sample tutor data, the plugin reliably flagged concerning patterns such as panic language, vague notes, and very short sessions. While I didn’t use formal evaluation metrics like precision or recall, I designed the system to minimize false negatives — that is, to avoid missing any reflections that might indicate serious issues (e.g., self-harm, emotional distress). This meant I accepted a higher rate of false positives in order to ensure concerning cases were not overlooked.
 
 It also surfaced unexpectedly positive patterns, such as strong student initiative or well-organized progress, which might otherwise go unrecognized.
 
 The tool fits seamlessly into existing workflows — it does not require any third-party installation, and because it's built using native Google tools, it runs directly inside Google Sheets where tutors are already working.
 
-Feedback from staff emphasized that the tool could help identify struggling students sooner and support stronger, data-driven coaching and tutoring.
+I shared the tool with two staff members during my internship, both of whom provided positive feedback. One noted that the emoji-tagging made patterns easier to spot, while another mentioned that the automatic flagging helped surface comments they would have otherwise missed. Based on this feedback, I made several refinements to the plugin before final testing.
 
 ---
 
